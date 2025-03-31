@@ -21,6 +21,6 @@ function envoyerMail() {
     );
 
     // Ouvrir Gmail avec les champs remplis
-    var mailtoLink = "https://mail.google.com/mail/?view=cm&fs=1&to=chriskellydoffou@gmail.com&sujet=" + sujet + "&Message=" + corpsMessage;
-    window.open(mailtoLink, "_blank");
+    var mailtoLink = "mailto:chriskellydoffou@gmail.com?subject=" + sujet + "&body=" + corpsMessage;
+    window.location.href = mailtoLink;
 }
