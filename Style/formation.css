@@ -1,0 +1,106 @@
+.formation {
+    padding: 40px;
+    background-color: #3b82f6;
+  }
+  
+  .formation h3 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: white;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .formation-texte {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .formation-1,
+  .formation-2,
+  .formation-3,
+  .formation-4 {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+    animation: slideInLeft 0.5s ease-in-out;
+  }
+  
+  .formation-1:hover,
+  .formation-2:hover,
+  .formation-3:hover,
+  .formation-4:hover {
+    transform: translateY(-5px);
+  }
+  
+  .formation-1 div:first-child,
+  .formation-2 div:first-child,
+  .formation-3 div:first-child,
+  .formation-4 div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .formation-1 h4,
+  .formation-2 h4,
+  .formation-3 h4,
+  .formation-4 h4 {
+    color: #3b82f6;
+    font-size: 1.2em;
+    margin: 0;
+  }
+  
+  .formation-1 p,
+  .formation-2 p,
+  .formation-3 p,
+  .formation-4 p {
+    color: black;
+    font-size: 0.9em;
+  }
+  
+  .formation-1 div:last-child p,
+  .formation-2 div:last-child p,
+  .formation-3 div:last-child p,
+  .formation-4 div:last-child p {
+    font-style: italic;
+    color: black;
+  }
+  
+  .formation-1 div:last-child,
+  .formation-2 div:last-child,
+  .formation-3 div:last-child,
+  .formation-4 div:last-child {
+    margin-top: 15px;
+    line-height: 1.6;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  footer{
+    background-color: white;
+    color: #333;
+  }

@@ -1,0 +1,89 @@
+section h3 {
+    text-align: center;
+    padding: 20px 0; /* Augmentation du padding pour un meilleur espacement */
+    color: #eee; /* Couleur de texte plus lisible */
+    font-size: 2em; /* Taille de police plus grande pour les titres */
+    border-bottom: 2px solid #eee; /* Ajout d'une bordure en bas pour séparer le titre du contenu */
+    margin-bottom: 20px; /* Ajout d'une marge en bas pour espacer le titre du texte */
+  }
+  
+  .profil-texte,
+  .objectif-texte,
+  .pointFort-texte {
+    width: 80%; /* Réduction de la largeur pour une meilleure lisibilité sur les écrans plus petits */
+    max-width: 1000px; /* Ajout d'une largeur maximale pour éviter que le texte ne devienne trop large */
+    text-align: justify;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 20px auto; /* Ajout de marges en haut et en bas pour un meilleur espacement */
+    font-size: 1.1em; /* Réduction de la taille de police pour une meilleure lisibilité */
+    line-height: 1.6; /* Ajout d'un espacement entre les lignes pour une meilleure lisibilité */
+    color: #eee; /* Couleur de texte plus lisible */
+  }
+  
+  .profil em {
+    color: #eee; /* Couleur de texte en italique assortie à la couleur de fond de la section profil */
+    font-style: italic;
+    
+  }
+  
+  
+  
+  .profil {
+    background-color: #3b82f6;
+    color: white; /* Couleur de texte blanc pour la section profil sur fond bleu */
+    padding: 20px; /* Ajout de padding pour un meilleur espacement */
+  }
+.autre {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+  }
+  
+  .point-fort,
+  .objectif {
+    width: 45%;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    
+  }
+  
+  .point-fort:hover,
+  .objectif:hover {
+    transform: translateY(-5px);
+  }
+  
+  .point-fort h3,
+  .objectif h3 {
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+  }
+  
+  .pointFort-texte p,
+  .objectif-texte p {
+    line-height: 1.6;
+    color: #555;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+.objectif-texte em{
+    color: red;
+}

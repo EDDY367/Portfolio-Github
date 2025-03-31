@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="sendEmail.js" defer></script>
+    <script src="projet.js" defer></script>
+    <link rel="stylesheet" href="Style/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>MON PortFolio</h1>
+            <div>
+                <a href="index.html">Accueil</a>
+                <a href="Apropos.html">A-propos</a>
+                <a href="#projet">Projet</a>
+                
+                <a href="experience.html">Expérience</a>
+                <a href="formation.html">Formation</a>
+                <a href="#section-contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="accueil-1">
+            <div class="accueil-img">
+                <img src="Images/Doffou.jpg" alt="image de DOFFOU Eddy">
+            </div>
+            <div class="accueil-texte">
+                <p>
+                    Jeune développeur passionné, 
+                    prêt à transformer les idées 
+                    en réalité avec une énergie 
+                    et une soif d'apprendre 
+                    sans limites.
+                </p>
+                <a href="#section-contact" class="cta">UN PROJET, UN STAGE? ÉCRIVEZ-MOI</a>
+            </div>
+        </section>
+        <div class="nomProjet" id="projet">
+            <h3>Projet</h3>
+        </div>
+        <section class="accueil-projet" >
+        
+
+        </section>
+        <br><br><hr>
+        <section class="accueil-contact" id="section-contact" >
+            <div class="formulaire" >
+                <h3>Contact</h3>
+                <form id="emailForm">
+                    <div class="form-ligne-1">
+                        <div>
+                            <input type="text" id="nom" placeholder="Nom" required>
+                        </div>
+                        <div>
+                            <input type="email" id="email" placeholder="Email" required>
+                        </div>
+                    </div>
+                    <div class="form-ligne-2">
+                        <select id="type-message">
+                            <option value="Projet">Projet</option>
+                            <option value="Stage" selected>Stage</option>
+                        </select>
+                    </div>
+                    <div class="form-ligne-3">
+                        <textarea id="message" rows="10" cols="100" placeholder="Votre message..." required></textarea>
+                    </div>
+                    <div class="form-ligne-4">
+                        <button type="button" onclick="envoyerMail()">Envoyer</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <br><br>
+    <footer>
+        <p> Ceci est le portfolio de M. DOFFOU Eddy Yann Etudiant développeur Web & Application</p>
+    </footer>
+</body>
+</html>
+
+
+
+
