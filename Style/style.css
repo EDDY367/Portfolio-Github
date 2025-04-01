@@ -201,71 +201,66 @@ footer {
   
 
 @media screen and (max-width: 768px) {
-  @media screen and (max-width: 768px) {
-    /* HEADER */
-    header {
-        flex-direction: column;
-        height: auto;
-        padding: 10px;
-    }
-  
-   
-    .menu {
-        display: block; 
-    }
-    
-  
-    .nav-link {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: #3b82f6;
-        text-align: center;
-        padding: 0;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.5s ease-out;
-    }
-  
-    .nav-link a {
-        display: block;
-        padding: 15px;
-        font-size: 1.2rem;
-        border-bottom: 1px solid #3b82f6;
-        background-color: white;
-        color: #3b82f6;
+  /* HEADER */
+  header {
+      flex-direction: column;
+      height: auto;
+      padding: 10px;
+  }
 
-    }
+  .menu {
+      display: block; 
+  }
   
-    /* Activation du menu déroulant */
-    .nav-link.active {
-        max-height: 300px;
-    }
-  
-    /* MAIN */
-    main .accueil-1 {
-        flex-direction: column;
-        text-align: center;
-        height: auto;
-        padding: 50px 20px;
-    }
-  
-    /* IMAGE D'ACCUEIL */
-    main .accueil-1 .accueil-img img {
-        width: 250px;
-    }
-  
-    /* PROJETS */
-    .accueil-projet {
-        grid-template-columns: 1fr;
-    }
-  
-    /* FORMULAIRE */
-    .formulaire {
-        width: 70%;
-    }
+  .nav-link {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background: #3b82f6;
+      text-align: center;
+      padding: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-out;
+  }
+
+  .nav-link a {
+      display: block;
+      padding: 15px;
+      font-size: 1.2rem;
+      border-bottom: 1px solid #3b82f6;
+      background-color: white;
+      color: #3b82f6;
+  }
+
+  /* Activation du menu déroulant */
+  .nav-link.active {
+      max-height: 300px;
+  }
+
+  /* MAIN */
+  main .accueil-1 {
+      flex-direction: column;
+      text-align: center;
+      height: auto;
+      padding: 50px 20px;
+  }
+
+  /* IMAGE D'ACCUEIL */
+  main .accueil-1 .accueil-img img {
+      width: 250px;
+  }
+
+  /* PROJETS */
+  .accueil-projet {
+      grid-template-columns: 1fr;
+  }
+
+  /* FORMULAIRE */
+  .formulaire {
+      width: 70%;
   }
 }
