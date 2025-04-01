@@ -207,6 +207,9 @@ footer {
       height: auto;
       padding: 10px;
   }
+  main .accueil-1 .accueil-img{
+    margin-left: 0px;
+}
 
   .menu {
       display: block; 

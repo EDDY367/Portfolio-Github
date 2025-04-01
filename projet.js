@@ -61,14 +61,7 @@ function closeMenu() {
     document.querySelector(".nav-links").classList.remove("active");
 }
 
-document.addEventListener("click", function(event) {
-    var nav = document.querySelector(".nav-link");
-    var burger = document.querySelector(".menu");
 
-    if (!nav.contains(event.target)) {
-        nav.classList.remove("active");
-    }
-});
 
   
  
