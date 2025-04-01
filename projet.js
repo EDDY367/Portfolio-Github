@@ -65,7 +65,7 @@ document.addEventListener("click", function(event) {
     var nav = document.querySelector(".nav-link");
     var burger = document.querySelector(".menu");
 
-    if (!nav.contains(event.target) && !menu.contains(event.target)) {
+    if (!nav.contains(event.target)) {
         nav.classList.remove("active");
     }
 });

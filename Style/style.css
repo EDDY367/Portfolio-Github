@@ -39,7 +39,7 @@ main .accueil-1 .accueil-img img{
 }
 main .accueil-1 .accueil-texte{
     text-align: center;
-    width: 550px;
+    
 }
 main .accueil-1 .accueil-texte p{
     
@@ -242,11 +242,18 @@ footer {
   }
 
   /* MAIN */
+  *{
+    max-width: 768px;
+  
   main .accueil-1 {
       flex-direction: column;
       text-align: center;
       height: auto;
       padding: 50px 20px;
+  }
+  
+  .accueil-texte p{
+    width: 250px;
   }
 
   /* IMAGE D'ACCUEIL */
@@ -263,4 +270,5 @@ footer {
   .formulaire {
       width: 70%;
   }
+}
 }
