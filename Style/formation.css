@@ -172,7 +172,7 @@
 /* RESPONSIVE DESIGN */
 
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .formation {
         padding: 20px;
     }

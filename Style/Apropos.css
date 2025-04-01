@@ -85,7 +85,7 @@ section h3 {
   color: red;
 }
 
-@media (max-width: 768px) {
+@media screen and  (max-width: 768px) {
   .autre {
       flex-direction: column;
       align-items: center;
