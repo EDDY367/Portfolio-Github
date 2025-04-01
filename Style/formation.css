@@ -1,6 +1,6 @@
 .formation {
     padding: 40px;
-    background-color: #3b82f6;
+    background-color: rgba(59, 130, 246, 0.8);
   }
   
   .formation h3 {
@@ -12,6 +12,7 @@
     padding-bottom: 10px;
     animation: fadeIn 1s ease-in-out;
   }
+  
   
   .formation-texte {
     max-width: 800px;
@@ -104,3 +105,120 @@
     background-color: white;
     color: #333;
   }
+
+  @media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav div {
+        flex-direction: column;
+    }
+}
+
+/* FORMATION */
+.formation {
+    padding: 40px;
+    background-color: rgba(59, 130, 246, 0.8);
+}
+
+.formation h3 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: white;
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Grille pour les formations */
+.formation-texte {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Style des blocs de formation */
+.formation-texte > div {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: slideInLeft 0.5s ease-in-out;
+}
+
+.formation-texte > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* TITRES */
+.formation-texte h4 {
+    color: #3b82f6;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.formation-texte p {
+    color: black;
+    font-size: 0.9em;
+}
+
+/* RESPONSIVE DESIGN */
+
+
+@media (max-width: 768px) {
+    .formation {
+        padding: 20px;
+    }
+
+    .formation h3 {
+        font-size: 1.8em;
+    }
+
+    .formation-texte {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .formation-texte > div {
+        padding: 15px;
+    }
+
+    .formation-texte h4 {
+        font-size: 1em;
+    }
+
+    .formation-texte p {
+        font-size: 0.85em;
+    }
+}
+
+
+
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

@@ -1,13 +1,18 @@
 *{
     margin: 0;
 }
+
 header{
     height: 50px;
 }
+
 header nav{
     display: flex;
     justify-content: space-around;
     align-items: center;  
+}
+.menu{
+  display: none;
 }
 header nav a {
     text-decoration: none;
@@ -18,7 +23,8 @@ main .accueil-1 {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-around;
-    background-color: #3b82f6;
+    background-color: rgba(59, 130, 246, 0.8); 
+    
     align-items: center;
     height: 500px;
     
@@ -33,13 +39,13 @@ main .accueil-1 .accueil-img img{
 }
 main .accueil-1 .accueil-texte{
     text-align: center;
-    width: 600px;
+    width: 550px;
 }
 main .accueil-1 .accueil-texte p{
     
     padding-left: 50px;
     padding-right: 50px;
-    font-size: 2em;
+    font-size: 1.5em;
     color: white;
     margin-bottom: 30px;
 }
@@ -55,36 +61,55 @@ main .accueil-1 .accueil-texte a{
 
 
 
-main .accueil-contact .formulaire #emailForm .form-ligne-1, main .accueil-contact .formulaire #emailForm .form-ligne-2, main .accueil-contact .formulaire #emailForm .form-ligne-3{
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    margin: 20px;
+/* -------- CONTACT FORM -------- */
+main .accueil-contact {
+  background-color: rgba(59, 130, 246, 0.8);
+  padding: 50px 0;
 }
 
-input{
-    padding:5px 90px;
+.formulaire {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.formulaire h3 {
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+input, select, textarea {
+  width: 100%;
+  
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+input, select{
+  height: 30px;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  background: #ec4899;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  
 
 }
-main .accueil-contact .formulaire #emailForm .form-ligne-2 #type-message{
-    width: 200px;  
-    
-}
-main .accueil-contact h3{
-    text-align: center;
-    margin: 20px;
-    margin-bottom: 40px;
-}
-main .accueil-contact .formulaire #emailForm .form-ligne-4 button{
-    border: 1px solid #ec4899;
-    border-radius: 10px;
-    background-color: #ec4899;
-    color: white;
-    padding: 10px;
-    display: flex;
-    margin-left: 1050px;
-    cursor: pointer;
 
+button:hover {
+  background: #db2777;
 }
 
 .accueil-projet {
@@ -93,6 +118,10 @@ main .accueil-contact .formulaire #emailForm .form-ligne-4 button{
     gap: 20px;
     padding: 20px;
   }
+.nomProjet h3{
+  font-size: 1.5em;
+  margin-bottom: 30px;
+}
   
   .cadre {
     background-color: #f0f0f0;
@@ -101,7 +130,7 @@ main .accueil-contact .formulaire #emailForm .form-ligne-4 button{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     height: 500px;
-    margin: 0px 100px;
+    margin: 0px 40px;
   }
   
   .cadre:hover {
@@ -138,6 +167,11 @@ main .accueil-contact .formulaire #emailForm .form-ligne-4 button{
   .cadre:nth-child(even) {
     animation-delay: 0.2s;
   }
+  .menu {
+    display: none; /* Caché par défaut sur grand écran */
+    font-size: 2rem;
+    cursor: pointer;
+}
   
   @keyframes fadeIn {
     to {
@@ -148,19 +182,90 @@ main .accueil-contact .formulaire #emailForm .form-ligne-4 button{
 
   hr{
     height:5px;
-    background-color: #3b82f6;
+    background-color: rgba(59, 130, 246, 0.8);
   }
 .nomProjet h3{
     text-align: center;
     margin-top: 20px;
 }
 
+/* -------- FOOTER -------- */
 footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
-    background-color: #3b82f6;
-    color: white;
+  text-align: center;
+  padding: 20px;
+  background: white;
+  color: #3b82f6;
 }
+/* -------- RESPONSIVE DESIGN -------- */
 
+  
+
+@media (max-width: 768px) {
+  @media (max-width: 768px) {
+    /* HEADER */
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+  
+   
+    .menu {
+        display: block; 
+    }
+    
+  
+    .nav-link {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #3b82f6;
+        text-align: center;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out;
+    }
+  
+    .nav-link a {
+        display: block;
+        padding: 15px;
+        font-size: 1.2rem;
+        border-bottom: 1px solid #3b82f6;
+        background-color: white;
+        color: #3b82f6;
+
+    }
+  
+    /* Activation du menu déroulant */
+    .nav-link.active {
+        max-height: 300px;
+    }
+  
+    /* MAIN */
+    main .accueil-1 {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding: 50px 20px;
+    }
+  
+    /* IMAGE D'ACCUEIL */
+    main .accueil-1 .accueil-img img {
+        width: 250px;
+    }
+  
+    /* PROJETS */
+    .accueil-projet {
+        grid-template-columns: 1fr;
+    }
+  
+    /* FORMULAIRE */
+    .formulaire {
+        width: 70%;
+    }
+  }
+}
