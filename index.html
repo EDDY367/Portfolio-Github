@@ -3,9 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+
 <title>Eddy Yann DOFFOU - Développeur Web</title>
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+    color: var(--gray-900);
+    background: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+h1, h2, h3, h4, h5, h6, p, a, span, li, input, textarea, select, button {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+}
+
 
 :root {
     --primary: #2563eb;
@@ -549,6 +563,123 @@ footer {
         padding: 2rem;
     }
 }
+/* Bouton dark mode */
+.dark-toggle {
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.dark-toggle:hover { background: #1d4ed8; transform: rotate(20deg) scale(1.1); }
+
+/* Mode sombre inversé */
+body.dark-mode {
+    background: #0f172a; /* ancien blanc → noir */
+    color: #f1f5f9;      /* texte noir → blanc */
+}
+body.dark-mode h1, body.dark-mode h2,body.dark-mode h3,body.dark-mode h4, body.dark-mode h5, body.dark-mode h6, body.dark-mode p{
+    color: white;
+}
+
+
+body.dark-mode .dark-toggle{
+    background-color: white;
+    color:white;
+}
+body.dark-mode nav {
+    background:#1e293b;
+    color:white;
+    border-bottom: 1px solid #475569; 
+    /* gris foncé */
+}
+
+body.dark-mode nav a{
+    color:white;
+}
+
+
+body.dark-mode .nav-links  {
+    color: #f1f5f9; /* liens blancs */
+    background-color: #1e293b;
+}
+
+body.dark-mode .nav-links a:hover::after {
+    background: #ef4444; /* bleu → rouge */
+}
+
+body.dark-mode .hero-text h2,
+body.dark-mode .section-title {
+    color: #f1f5f9; /* titres blancs */
+}
+
+body.dark-mode .hero-text .highlight {
+    color: #ef4444; /* bleu → rouge */
+}
+
+body.dark-mode .hero-text p,
+body.dark-mode .section-subtitle,
+body.dark-mode .about-card p,
+body.dark-mode .project-content p,
+body.dark-mode .timeline-content p {
+    color: #e2e8f0; /* gris clair → clair sur fond sombre */
+}
+
+body.dark-mode .about-card,
+body.dark-mode .project-card,
+body.dark-mode .timeline-content,
+body.dark-mode .contact-form {
+    background: #1e293b; /* cartes sombres */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .skill-tag,
+body.dark-mode .cta-button,
+body.dark-mode .submit-btn {
+    background: #ef4444; /* bleu → rouge */
+    box-shadow: 0 4px 14px rgba(239, 68, 68, 0.3);
+}
+
+body.dark-mode .skill-tag:hover,
+body.dark-mode .cta-button:hover,
+body.dark-mode .submit-btn:hover {
+    background: #b91c1c; /* rouge foncé */
+}
+
+body.dark-mode footer {
+    background: #f1f5f9; /* ancien noir → blanc */
+    color: #0f172a;      /* texte blanc → noir */
+}
+
+/* Timeline dots */
+body.dark-mode .timeline-dot {
+    background: #ef4444; /* bleu → rouge */
+    border: 4px solid #0f172a; /* ajuster pour contraste */
+}
+
+body.dark-mode section{
+    background-color: #0f172a;
+}
+
+body.dark-mode #contact div{
+    background-color: #0f172a;
+}
+body.dark-mode #formation, body.dark-mode #contact,  body.dark-mode #projects,body.dark-mode #about,body.dark-mode #home {
+    background-color: #0f172a;
+}
+body.dark-mode footer {
+    background-color: #0f172a;
+    color: white;
+}
+
+
 </style>
 </head>
 <body>
@@ -563,6 +694,8 @@ footer {
             <li><a href="#projects">Projets</a></li>
             <li><a href="#formation">Formation</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><button id="darkModeToggle" class="dark-toggle" title="Activer/désactiver le mode sombre">🌙</button>
+</li>
         </ul>
     </div>
 </nav>
@@ -784,6 +917,17 @@ contactForm.addEventListener('submit', function(e) {
             submitBtn.textContent = 'Envoyer le message';
         });
 });
+
+
+// Bouton dark mode
+const darkToggle = document.getElementById('darkModeToggle');
+darkToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    // Changer l’icône du bouton
+    darkToggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+});
+
+
 </script>
 </body>
 </html>
